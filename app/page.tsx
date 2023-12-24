@@ -22,7 +22,7 @@ export default function Home() {
     <main className="min-h-screen bg-gray-100 mx-auto ">
         <div className='single-text max-w-[90%] mx-auto shadow-sm'>
           <h2 className='font-semibold relative z-[1] mb-8 pb-4 border-b-[rgba(0,0,0,0.05)] border-b border-solid'>Validate an Email Address</h2>
-          <div className="container w-full flex flex-col gap-5 md:gap-0 md:flex-row lg:flex-row lg:gap-0">
+          <div className="w-full flex flex-col gap-5 md:gap-0 md:flex-row lg:flex-row lg:gap-0">
               <div className="left-sidebar w-full px-[15px] md:w-6/12 md:max-w-[50%] lg:w-6/12 lg:max-w-[50%]">
                 <div className='bg-white shadow-[0_2px_4px_rgba(126,142,177,0.12)] h-full px-8 py-6 rounded-md'>
                     <div className="single-title relative">
