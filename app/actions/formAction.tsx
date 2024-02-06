@@ -12,6 +12,7 @@ export async function emailValidate(prevState: any, formData: FormData) {
   });
   const result = await response.json();
   
+  console.log(result)
   return {
     message: 'Please enter a valid email',
     ...result
@@ -20,7 +21,7 @@ export async function emailValidate(prevState: any, formData: FormData) {
 
 
 
-export async function* emailBulkValidate(prevState:any, formData:FormData){
+export async function emailBulkValidate(prevState:any, formData:FormData){
   
   const emails = formData.get('emails')
 
@@ -40,7 +41,7 @@ export async function* emailBulkValidate(prevState:any, formData:FormData){
           });
 
       const result = await response.json();
-
+        console.log(result)
       return result;
     })
 

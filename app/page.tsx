@@ -15,13 +15,13 @@ export default async function Home() {
   const [singleState, singleFormAction] = useFormState(emailValidate, initialState)
   // const [multipleState, multipleFormAction] = useFormState(emailBulkValidate,initialState)
   
-  useEffect(()=>{
-    console.log(typeof multipleState?.data)
-    const generator = streamItems()
-                    for await (const item of generator) {
-                        console.log(item)
-                    }
-  },[multipleState])
+  // useEffect(()=>{
+    // console.log(typeof multipleState?.data)
+    // const generator = streamItems()
+                    // for await (const item of generator) {
+                    //     console.log(item)
+                    // }
+  // },[multipleState])
 
   return (
     <main className="min-h-screen bg-gray-100 mx-auto ">
@@ -74,7 +74,7 @@ export default async function Home() {
                       </div>
                       {/* <h3 className='font-semibold text-sm text-[#4a910c] pt-10 pb-0 px-0'>Enter Email to Check</h3> */}
 
-                      <form action={multipleFormAction} >
+                      <form action={()=>console.log("this form is used for multiple check")} >
                           <textarea name="emails" placeholder='Email to Check' className='text-[13px] text-[#92929D] w-full h-[200px] border mt-[23px] mb-0 mx-0 p-[25px] rounded-[5px] border-solid border-[#E2E2EA] focus:outline-0'/>
                           <p className='text-[red] text-[11px] block mt-[15px]'>Please Provide an Email First</p>
                           <button className='text-[0.8rem] rounded min-w-[80px_px] mt-[15px] px-3 py-1.5 bg-green-500' type="submit">Verify</button>
